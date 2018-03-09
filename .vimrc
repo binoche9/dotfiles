@@ -31,9 +31,18 @@ set t_ts=]1;
 set t_fs=
 set laststatus=2
 
+" Show spaces on screen
+hi SpecialKey ctermbg=None guibg=None
+set listchars=space:·
+set listchars+=tab:\|\-
+set list
+
+" Show line numbers
+hi LineNr ctermbg=None gui=None
+set number
+
 set tabstop=4
 set shiftwidth=4
 set expandtab
 set ruler
-set number
 set smartindent

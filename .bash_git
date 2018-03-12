@@ -1,0 +1,35 @@
+# Git
+alias g='git'
+alias gs='git status'
+alias ga='git add .'
+alias gc='git commit -m' # requires you to type a commit message
+alias gco='git checkout'
+alias gp='git push'
+alias gpf='git push --force'
+alias gb='git branch'
+alias gd=gitdiff
+alias gl='git log'
+alias gr='git rebase'
+
+gitdiff(){
+    git diff --color $1
+}
+
+# Git branch details
+function parse_git_dirty() {
+    [[ $(git status 2> /dev/null | tail -n1) != *"working directory clean"* ]] && echo "*"
+}
+function parse_git_branch() {
+    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
+}
+
+if [ -f ~/dotfiles/.git-completion.bash ]; then
+    source ~/dotfiles/.git-completion.bash
+
+    # Add git completion to aliases
+    __git_complete g __git_main
+    __git_complete gco _git_checkout
+    __git_complete gp _git_push
+    __git_complete gr _git_rebase
+    __git_complete gb _git_branch
+fi

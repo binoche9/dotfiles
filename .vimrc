@@ -1,3 +1,5 @@
+" Enable syntax highlighting for these bash files
+au BufNewFile,BufRead .bash_git call SetFileTypeSH("bash")
 au BufNewFile,BufRead .bash_path call SetFileTypeSH("bash")
 au BufNewFile,BufRead .bash_local call SetFileTypeSH("bash")
 au BufNewFile,BufRead .bash_aliases call SetFileTypeSH("bash")

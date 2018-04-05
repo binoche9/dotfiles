@@ -10,9 +10,14 @@ alias gb='git branch'
 alias gd=gitdiff
 alias gl='git log'
 alias gr='git rebase'
+alias gri=gitrebase
 
 gitdiff(){
     git diff --color $1
+}
+
+gitrebase(){
+    git rebase -i HEAD~$1
 }
 
 # Git branch details

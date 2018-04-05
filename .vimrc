@@ -1,3 +1,6 @@
+scriptencoding utf-8
+set encoding=utf-8
+
 " Enable syntax highlighting for these bash files
 au BufNewFile,BufRead .bash_git call SetFileTypeSH("bash")
 au BufNewFile,BufRead .bash_path call SetFileTypeSH("bash")
@@ -37,7 +40,7 @@ set laststatus=2
 hi SpecialKey ctermbg=None guibg=None
 hi SpecialKey ctermfg=darkgray guifg=darkgray
 set listchars=trail:·
-set listchars+=tab:→\ ,nbsp:␣
+set listchars+=tab:\-\ 
 set list
 
 " Show line numbers

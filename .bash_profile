@@ -1,7 +1,6 @@
 [[ -f ~/dotfiles/.bash_path ]] && source ~/dotfiles/.bash_path
 [[ -f ~/dotfiles/.bash_git ]] && source ~/dotfiles/.bash_git
 [[ -f ~/dotfiles/.bash_aliases ]] && source ~/dotfiles/.bash_aliases
-[[ -f ~/.bash_local ]] && source ~/.bash_local
 
 ### Prompt Colors
 # Modified version of @gf3’s Sexy Bash Prompt
@@ -77,3 +76,6 @@ then
 fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# Local overrides
+[[ -f ~/.bash_local ]] && source ~/.bash_local

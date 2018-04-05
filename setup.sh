@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Install Homebrew
 # if ! command -v brew;
@@ -6,10 +6,12 @@
 #   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 # fi
 
-brew update
+# brew update
 
 # Install Pygments
-sudo easy_install Pygments
+if [[ -z $(sudo -v) ]]; then
+  sudo easy_install Pygments
+fi
 
 # Install Pathogen
 if [[ ! -f ~/.vim/autoload/pathogen.vim ]]; then
@@ -18,7 +20,7 @@ fi
 
 # Install Solarized for Vim
 if [[ ! -d ~/.vim/bundle/vim-colors-solarized/ ]]; then
-  git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle
+  git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/vim-colors-solarized
 fi
 
 # Create backups
@@ -29,8 +31,8 @@ fi
 
 
 # Create symlinks to dotfiles
-[[ ! -f ~/.bash_profile ]] && ln -s ~/.bash_profile ~/dotfiles/.bash_profile
-[[ ! -f ~/.bashrc ]] && ln -s ~/.bashrc ~/dotfiles/.bashrc
-[[ ! -f ~/z.sh ]] && ln -s ~/z.sh ~/dotfiles/z.sh
-[[ ! -f ~/.vimrc ]] && ln -s ~/.vimrc ~/dotfiles/.vimrc
-[[ ! -f ~/.gitignore ]] && ln -s ~/.gitignore ~/dotfiles/.gitignore
+[[ ! -f ~/.bash_profile ]] && ln -s ~/dotfiles/.bash_profile ~/.bash_profile
+[[ ! -f ~/.bashrc ]] && ln -s ~/dotfiles/.bashrc ~/.bashrc
+[[ ! -f ~/z.sh ]] && ln -s ~/dotfiles/z.sh ~/z.sh
+[[ ! -f ~/.vimrc ]] && ln -s ~/dotfiles/.vimrc ~/.vimrc
+[[ ! -f ~/.gitignore ]] && ln -s ~/dotfiles/.gitignore ~/.gitignore

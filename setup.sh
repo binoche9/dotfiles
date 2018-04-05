@@ -1,10 +1,10 @@
 #!/bin/sh
 
 # Install Homebrew
-if ! command -v brew;
-then
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
+# if ! command -v brew;
+# then
+#   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# fi
 
 brew update
 
@@ -21,6 +21,14 @@ if [[ ! -d ~/.vim/bundle/vim-colors-solarized/ ]]; then
   git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle
 fi
 
+# Create backups
+[[ -f ~/.bash_profile ]] && mv ~/.bash_profile ~/.bash_profile.bak
+[[ -f ~/.bashrc ]] && mv ~/.bashrc ~/.bashrc.bak
+[[ -f ~/.profile ]] && mv ~/.profile ~/.profile.bak
+[[ -f ~/.vimrc ]] && mv ~/.vimrc ~/.vimrc.bak
+
+
+# Create symlinks to dotfiles
 [[ ! -f ~/.bash_profile ]] && ln -s ~/.bash_profile ~/dotfiles/.bash_profile
 [[ ! -f ~/.bashrc ]] && ln -s ~/.bashrc ~/dotfiles/.bashrc
 [[ ! -f ~/z.sh ]] && ln -s ~/z.sh ~/dotfiles/z.sh

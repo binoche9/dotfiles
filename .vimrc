@@ -19,7 +19,7 @@ let g:solarized_termtrans = 1
 colorscheme solarized
 
 highlight LineNr ctermfg=darkgray
-highlight LineNr ctermbg=black
+highlight LineNr ctermbg=none
 
 map <F2> :NERDTreeToggle<CR>
 imap qw <Esc>
@@ -35,8 +35,9 @@ set laststatus=2
 
 " Show spaces on screen
 hi SpecialKey ctermbg=None guibg=None
-set listchars=space:·
-set listchars+=tab:\|\-
+hi SpecialKey ctermfg=darkgray guifg=darkgray
+set listchars=trail:·
+set listchars+=tab:→\ ,nbsp:␣
 set list
 
 " Show line numbers

@@ -8,11 +8,6 @@
 
 # brew update
 
-# Install Pygments
-if [[ -z $(sudo -v) ]]; then
-  sudo easy_install Pygments
-fi
-
 # Install Pathogen
 if [[ ! -f ~/.vim/autoload/pathogen.vim ]]; then
   mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim

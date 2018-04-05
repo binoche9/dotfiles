@@ -30,7 +30,7 @@ alias sudo='sudo '
 
 # Colored up cat!
 # You must install Pygments first - "sudo easy_install Pygments"
-alias c='pygmentize -O style=monokai -f console256 -g'
+# alias c='pygmentize -O style=monokai -f console256 -g'
 
 alias rebash='source ~/.bash_profile'
 alias vimrc='vim ~/.vimrc'

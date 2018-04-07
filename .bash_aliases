@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Aliases not in .bash_aliases:
 #
 # Git aliases are in ~/dotfiles/.bash_git

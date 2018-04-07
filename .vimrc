@@ -1,12 +1,6 @@
 scriptencoding utf-8
 set encoding=utf-8
 
-" Enable syntax highlighting for these bash files
-au BufNewFile,BufRead .bash_git call SetFileTypeSH("bash")
-au BufNewFile,BufRead .bash_path call SetFileTypeSH("bash")
-au BufNewFile,BufRead .bash_local call SetFileTypeSH("bash")
-au BufNewFile,BufRead .bash_aliases call SetFileTypeSH("bash")
-
 execute pathogen#infect()
 execute pathogen#helptags()
 

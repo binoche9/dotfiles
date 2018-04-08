@@ -5,7 +5,9 @@ execute pathogen#infect()
 execute pathogen#helptags()
 
 filetype plugin on
+filetype indent on
 
+" Enable syntax highlighting for these bash files
 if !exists("g:syntax_on")
 	syntax enable
 endif

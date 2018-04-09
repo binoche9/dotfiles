@@ -17,6 +17,12 @@ let g:solarized_termcolors=256
 let g:solarized_termtrans = 1
 colorscheme solarized
 
+" Reload file if changed when changing buffers
+au FocusGained,BufEnter * :checktime
+
+" Update file when updated from outside
+set autoread
+
 highlight LineNr ctermfg=darkgray
 highlight LineNr ctermbg=none
 

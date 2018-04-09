@@ -57,6 +57,11 @@ symbol="ㅋᄏ"
 export PS1="\[${BOLD}${MAGENTA}\]\u \[$WHITE\]in \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n$symbol\[$RESET\]"
 export PS2="\[$ORANGE\]→ \[$RESET\]"
 
+# Detect current virtual environment
+if [[ $VIRTUAL_ENV != "" ]]; then
+    export PS1="(${VIRTUAL_ENV##*/}) $PS1"
+fi
+
 
 ### Misc
 

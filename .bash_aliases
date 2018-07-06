@@ -26,6 +26,7 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 alias desktop='cd ~/Desktop'
+alias dotfiles='cd ~/dotfiles'
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '

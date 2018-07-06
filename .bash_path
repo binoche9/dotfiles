@@ -8,3 +8,6 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 # RVM
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# pyenv
+export PATH="/Users/mjkim/.pyenv/bin:$PATH"

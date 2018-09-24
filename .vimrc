@@ -54,3 +54,5 @@ set shiftwidth=4
 set expandtab
 set ruler
 set smartindent
+
+au FileType javascript setlocal shiftwidth=2 softtabstop=2 tabstop=2

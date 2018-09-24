@@ -34,7 +34,9 @@ set rtp+=/Users/mjkim/go/src/github.com/golang/lint/misc/vim
 
 set title titlestring=%f
 set statusline=%<%F\ %h%m%r%y%=%-14.(%l,%c%V%)\ %P
+" CTRL+V <Esc>
 set t_ts=]1;
+" CTRL+V CTRL+G
 set t_fs=
 set laststatus=2
 

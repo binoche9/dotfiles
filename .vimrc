@@ -42,7 +42,7 @@ set laststatus=2
 hi SpecialKey ctermbg=None guibg=None
 hi SpecialKey ctermfg=darkgray guifg=darkgray
 set listchars=trail:·
-set listchars+=tab:\-\ 
+set listchars+=tab:.\ 
 set list
 
 " Show line numbers

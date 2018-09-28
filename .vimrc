@@ -17,6 +17,11 @@ let g:solarized_termcolors=256
 let g:solarized_termtrans = 1
 colorscheme solarized
 
+hi link javascriptTemplateDelim String
+hi link javascriptTemplateVar Text
+hi link javascriptTemplateString String
+
+"autocmd BufEnter *.js colorscheme OceanicNext
 " Reload file if changed when changing buffers
 au FocusGained,BufEnter * :checktime
 

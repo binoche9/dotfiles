@@ -30,7 +30,7 @@ map <F2> :NERDTreeToggle<CR>
 imap qw <Esc>
 imap jk <Esc>
 
-set rtp+=/Users/mjkim/go/src/github.com/golang/lint/misc/vim
+set rtp+=/Users/mjkim/go/src/golang.org/x/lint/misc/vim
 
 set title titlestring=%f
 set statusline=%<%F\ %h%m%r%y%=%-14.(%l,%c%V%)\ %P
@@ -59,4 +59,5 @@ set expandtab
 set ruler
 set smartindent
 
+au FileType go setlocal listchars=tab:\ \ ,trail:⋅
 au FileType javascript setlocal shiftwidth=2 softtabstop=2 tabstop=2

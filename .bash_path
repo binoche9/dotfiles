@@ -2,6 +2,7 @@
 
 # Go
 export PATH="$PATH:$HOME/go/bin"
+export PATH="$PATH:/usr/local/opt/go/libexec/bin"
 
 # MacPorts 
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH

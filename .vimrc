@@ -43,8 +43,8 @@ set laststatus=2
 " Show spaces on screen
 hi SpecialKey ctermbg=None guibg=None
 hi SpecialKey ctermfg=darkgray guifg=darkgray
-set listchars=trail:·
-set listchars+=tab:.\ 
+" Use multiplication dot U+22C5
+set listchars=tab:\|\ ,trail:⋅
 set list
 
 " Show line numbers

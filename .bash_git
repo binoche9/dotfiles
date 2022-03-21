@@ -5,6 +5,7 @@ alias g='git'
 alias gs='git status'
 alias ga='git add .'
 alias gc='git commit -m' # requires you to type a commit message
+alias gca='git commit --amend'
 alias gco='git checkout'
 alias gp='git push'
 alias gpf='git push --force'

@@ -20,7 +20,7 @@ gitdiff(){
 }
 
 gitrebase(){
-    git rebase -i HEAD~$1
+    git rebase -i --keep-empty HEAD~$1
 }
 
 # Git branch details

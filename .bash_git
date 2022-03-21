@@ -9,6 +9,7 @@ alias gca='git commit --amend'
 alias gco='git checkout'
 alias gp='git push'
 alias gpf='git push --force'
+alias gpo='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 alias gb='git branch'
 alias gd=gitdiff
 alias gl='git log'
